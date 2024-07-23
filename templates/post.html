@@ -51,9 +51,7 @@
             {% for comment in post.comments: %}
             <li>
               <div class="commenterImage">
-                <span style="background-color: blue; border-radius: 50%; font-size: 20px;">
-                  {{ comment.comment_author.name[0] }}
-                </span>
+                <i class="fa-solid fa-circle-user"></i>
               </div>
               <div class="commentText">
                 {{comment.text|safe}}
