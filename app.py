@@ -30,7 +30,7 @@ class Base(DeclarativeBase):
     pass
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://default:BxcS1puoJAe7@ep-aged-dust-a17fzeew.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 
